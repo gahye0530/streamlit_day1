@@ -10,6 +10,7 @@ import streamlit as st
 
 def main() :
     st.title('Hello Streamlit. 웹대시보드')
+    st.title('헬로우')
     pass
 
 if __name__ == '__main__' : main()
