@@ -4,4 +4,4 @@ def main() :
     st.title('Hello')
 
 
-if __main__ == '__main__' : main()
+if __name__ == '__main__' : main()
