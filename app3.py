@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 def main() :
     df = pd.read_csv('iris.csv')
     st.dataframe(df)
