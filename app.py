@@ -9,6 +9,7 @@ import streamlit as st
 # main 함수가 있어야 한다. 
 
 def main() :
+    st.title('Hello Streamlit. 웹대시보드')
     pass
 
 if __name__ == '__main__' : main()
