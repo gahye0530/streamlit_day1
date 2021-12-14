@@ -16,8 +16,34 @@ def main() :
     if status == '오름차순정렬' : st.dataframe(df.sort_values('petal_length'))
     elif status == '내림차순정렬' : st.dataframe(df.sort_values('petal_length', ascending = False))
 
+    if st.checkbox("show / hide") : 
+        st.dataframe(df.head())
+    else : st.write('데이터가 없습니다.')
 
+    language = ['Python', 'C', 'Java', 'GO']
 
+    my_choice = st.selectbox('좋아하는 언어를 선택하세요', language)
+
+    if my_choice == 'C' : st.write('저는 C가 좋아요')
+    elif my_choice == 'Python' : st.write('파이썬이 최고다.')
+
+    choice_list = st.multiselect('여러개를 선택할 수 있습니다.', language)
+    # st.write(choice_list)
+
+    # 디버깅을 하고 싶으면 파이썬의 print함수를 이용하면 터미널에 출력이 된다. 
+    # print(choice_list)
+
+    choice_list = st.multiselect('컬럼을 선택하세요', df.columns)
+    # print(choice_list)
+    # print(df[choice_list])
+    st.dataframe(df[choice_list])
+
+    # st.slider('나이', 1, 10, step =2)
+    # st.slider('나이', 1, 10, value = 3)
+    age = st.slider('나이', 1, 100, value = 1)
+    st.write('선택한 나이는 {}입니다.' .format(age))
+
+    with st.expander('hello') : st.text('안녕하세요')
 
 
 if __name__ == '__main__' : main()
