@@ -31,7 +31,7 @@ def main() :
 
     df3 = pd.read_csv('data/location.csv', index_col=0)
     st.write(df3)
-    st.map(data = df3)
+    st.(data = df3)
 
     df4 = pd.read_csv('data/prog_languages_data.csv', index_col = 0)
     st.dataframe(df4)
